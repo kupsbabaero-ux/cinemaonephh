@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="Cinema One PH EPG Generator" generator-info-url="https://www.clickthecity.com/tv/channels/cinema-one" source-info-name="ClickTheCity" source-info-url="https://www.clickthecity.com/tv/channels/cinema-one">
+<tv generator-info-name="ClickTheCity Multi-Channel EPG Generator" generator-info-url="https://www.clickthecity.com/tv/" source-info-name="ClickTheCity" source-info-url="https://www.clickthecity.com/tv/">
   <channel id="cinema-one-ph">
     <display-name lang="en">Cinema One PH</display-name>
     <display-name lang="en">Cinema One</display-name>
     <icon src="https://www.clickthecity.com/img/tv/ch82.png"/>
     <url>https://www.clickthecity.com/tv/channels/cinema-one</url>
+  </channel>
+  <channel id="anc-ph">
+    <display-name lang="en">ANC PH</display-name>
+    <display-name lang="en">ANC</display-name>
+    <display-name lang="en">ABS-CBN News Channel</display-name>
+    <icon src="https://www.clickthecity.com/img/tv/ch13.png"/>
+    <url>https://www.clickthecity.com/tv/channels/anc</url>
+  </channel>
+  <channel id="anc-global">
+    <display-name lang="en">ANC Global</display-name>
+    <display-name lang="en">ANC International</display-name>
+    <icon src="https://www.clickthecity.com/img/tv/ch13.png"/>
+    <url>https://www.clickthecity.com/tv/channels/anc</url>
+  </channel>
+  <channel id="tv5-ph">
+    <display-name lang="en">TV5</display-name>
+    <display-name lang="en">TV 5</display-name>
+    <icon src="https://www.clickthecity.com/img/tv/ch5.png"/>
+    <url>https://www.clickthecity.com/tv/channels/tv5</url>
+  </channel>
+  <channel id="a2z-ph">
+    <display-name lang="en">A2Z</display-name>
+    <display-name lang="en">A2Z Channel 11</display-name>
+    <icon src="https://cdn1.clickthecity.com/wp-content/uploads/2020/10/21172907/a2z-logo-300x300.png"/>
+    <url>https://www.clickthecity.com/tv/channels/a2z-channel-11</url>
   </channel>
   <programme start="20261029010000 +0800" stop="20261029030000 +0800" channel="cinema-one-ph">
     <title lang="en">Ang Babaeng Putik</title>
@@ -12,10 +37,130 @@
     <category lang="en">Movie</category>
     <episode-num system="clickthecity">19028</episode-num>
   </programme>
-  <programme start="20261029030000 +0800" stop="20261029050000 +0800" channel="cinema-one-ph">
+  <programme start="20261029030000 +0800" stop="20261029040000 +0800" channel="cinema-one-ph">
     <title lang="en">Impaktita</title>
     <desc lang="en">Impaktita on Cinema One PH</desc>
     <category lang="en">Movie</category>
     <episode-num system="clickthecity">5174</episode-num>
+  </programme>
+  <programme start="20261029000000 +0800" stop="20261029003000 +0800" channel="anc-ph">
+    <title lang="en">The World Tonight</title>
+    <desc lang="en">The World Tonight on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71228</episode-num>
+  </programme>
+  <programme start="20261029003000 +0800" stop="20261029010000 +0800" channel="anc-ph">
+    <title lang="en">On Cue</title>
+    <desc lang="en">On Cue on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">115010</episode-num>
+  </programme>
+  <programme start="20261029010000 +0800" stop="20261029020000 +0800" channel="anc-ph">
+    <title lang="en">Headstart with Karen Davila</title>
+    <desc lang="en">Headstart with Karen Davila on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71239</episode-num>
+  </programme>
+  <programme start="20261029020000 +0800" stop="20261029023000 +0800" channel="anc-ph">
+    <title lang="en">Dwellings</title>
+    <desc lang="en">Dwellings on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116871</episode-num>
+  </programme>
+  <programme start="20261029023000 +0800" stop="20261029030000 +0800" channel="anc-ph">
+    <title lang="en">Beyond The Exchange</title>
+    <desc lang="en">Beyond The Exchange on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">117905</episode-num>
+  </programme>
+  <programme start="20261029030000 +0800" stop="20261029033000 +0800" channel="anc-ph">
+    <title lang="en">LSS: The Martin Nievera Show</title>
+    <desc lang="en">LSS: The Martin Nievera Show on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">108574</episode-num>
+  </programme>
+  <programme start="20261029033000 +0800" stop="20261029040000 +0800" channel="anc-ph">
+    <title lang="en">G Diaries: Stronger Together</title>
+    <desc lang="en">G Diaries: Stronger Together on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">55057</episode-num>
+  </programme>
+  <programme start="20261029040000 +0800" stop="20261029043000 +0800" channel="anc-ph">
+    <title lang="en">My Italy with Margarita</title>
+    <desc lang="en">My Italy with Margarita on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">109035</episode-num>
+  </programme>
+  <programme start="20261029043000 +0800" stop="20261029053000 +0800" channel="anc-ph">
+    <title lang="en">In Good Shape</title>
+    <desc lang="en">In Good Shape on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">50263</episode-num>
+  </programme>
+  <programme start="20261029000000 +0800" stop="20261029003000 +0800" channel="anc-global">
+    <title lang="en">The World Tonight</title>
+    <desc lang="en">The World Tonight on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71228</episode-num>
+  </programme>
+  <programme start="20261029003000 +0800" stop="20261029010000 +0800" channel="anc-global">
+    <title lang="en">On Cue</title>
+    <desc lang="en">On Cue on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">115010</episode-num>
+  </programme>
+  <programme start="20261029010000 +0800" stop="20261029020000 +0800" channel="anc-global">
+    <title lang="en">Headstart with Karen Davila</title>
+    <desc lang="en">Headstart with Karen Davila on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71239</episode-num>
+  </programme>
+  <programme start="20261029020000 +0800" stop="20261029023000 +0800" channel="anc-global">
+    <title lang="en">Dwellings</title>
+    <desc lang="en">Dwellings on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116871</episode-num>
+  </programme>
+  <programme start="20261029023000 +0800" stop="20261029030000 +0800" channel="anc-global">
+    <title lang="en">Beyond The Exchange</title>
+    <desc lang="en">Beyond The Exchange on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">117905</episode-num>
+  </programme>
+  <programme start="20261029030000 +0800" stop="20261029033000 +0800" channel="anc-global">
+    <title lang="en">LSS: The Martin Nievera Show</title>
+    <desc lang="en">LSS: The Martin Nievera Show on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">108574</episode-num>
+  </programme>
+  <programme start="20261029033000 +0800" stop="20261029040000 +0800" channel="anc-global">
+    <title lang="en">G Diaries: Stronger Together</title>
+    <desc lang="en">G Diaries: Stronger Together on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">55057</episode-num>
+  </programme>
+  <programme start="20261029040000 +0800" stop="20261029043000 +0800" channel="anc-global">
+    <title lang="en">My Italy with Margarita</title>
+    <desc lang="en">My Italy with Margarita on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">109035</episode-num>
+  </programme>
+  <programme start="20261029043000 +0800" stop="20261029053000 +0800" channel="anc-global">
+    <title lang="en">In Good Shape</title>
+    <desc lang="en">In Good Shape on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">50263</episode-num>
+  </programme>
+  <programme start="20261029000000 +0800" stop="20261029043000 +0800" channel="tv5-ph">
+    <title lang="en">Oras Ng Himala</title>
+    <desc lang="en">Oras Ng Himala on TV5</desc>
+    <category lang="en">General</category>
+    <episode-num system="clickthecity">14508</episode-num>
+  </programme>
+  <programme start="20261029043000 +0800" stop="20261029053000 +0800" channel="tv5-ph">
+    <title lang="en">Mga Kwentong MX3</title>
+    <desc lang="en">Mga Kwentong MX3 on TV5</desc>
+    <category lang="en">General</category>
+    <episode-num system="clickthecity">117831</episode-num>
   </programme>
 </tv>
