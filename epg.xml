@@ -1,1 +1,2 @@
-
+<?xml version='1.0' encoding='utf-8'?>
+<tv generator-info-name="Cinema One PH EPG Generator" generator-info-url="https://www.clickthecity.com/tv/channels/cinema-one"><channel id="cinema-one-ph"><display-name>Cinema One PH</display-name><icon src="https://www.clickthecity.com/img/tv/ch82.png" /></channel><programme start="20261029010000 +0800" stop="20261029030000 +0800" channel="cinema-one-ph"><title lang="en">Ang Babaeng Putik</title><desc lang="en">Ang Babaeng Putik on Cinema One PH</desc></programme><programme start="20261029030000 +0800" stop="20261029050000 +0800" channel="cinema-one-ph"><title lang="en">Impaktita</title><desc lang="en">Impaktita on Cinema One PH</desc></programme></tv>
