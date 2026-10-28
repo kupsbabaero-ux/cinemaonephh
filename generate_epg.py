@@ -1,14 +1,25 @@
+#!/usr/bin/env python3
+"""
+Cinema One PH EPG generator
+Source: https://www.clickthecity.com/tv/channels/cinema-one
+(via their JSON API — the page is a React SPA, HTML scrape no longer works)
+"""
+
 import requests
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
-from xml.etree.ElementTree import Element, SubElement, ElementTree
+from xml.etree.ElementTree import Element, SubElement, tostring
+from xml.dom import minidom
 import re
 
 SOURCE_URL = "https://www.clickthecity.com/tv/channels/cinema-one"
 API_URL = "https://www.clickthecity.com/api/tv/channels/cinema-one/schedule"
 
+# Keep your original ids + common IPTV-friendly aliases
 CHANNEL_ID = "cinema-one-ph"
 CHANNEL_NAME = "Cinema One PH"
+CHANNEL_NAME_ALT = "Cinema One"
+CHANNEL_LOGO_FALLBACK = "https://www.clickthecity.com/img/tv/ch82.png"
 
 TIMEZONE = ZoneInfo("Asia/Manila")
 
@@ -19,11 +30,12 @@ HEADERS = {
         "Chrome/140.0.0.0 Safari/537.36"
     ),
     "Accept": "application/json",
+    "Referer": SOURCE_URL,
 }
 
 
 def get_schedule():
-    """Fetch schedule from ClickTheCity API (site is a React SPA; HTML scrape no longer works)."""
+    """Fetch schedule from ClickTheCity API (same site as SOURCE_URL)."""
     response = requests.get(API_URL, headers=HEADERS, timeout=30)
     response.raise_for_status()
     payload = response.json()
@@ -35,9 +47,7 @@ def get_schedule():
 
     data = payload.get("data") or {}
     days = data.get("sched") or []
-    logo = (data.get("details") or {}).get("logo") or (
-        "https://www.clickthecity.com/img/tv/ch82.png"
-    )
+    logo = (data.get("details") or {}).get("logo") or CHANNEL_LOGO_FALLBACK
 
     programs = []
     current_year = datetime.now(TIMEZONE).year
@@ -45,7 +55,7 @@ def get_schedule():
     for day in days:
         date_label = (day.get("date") or "").strip()
         entries = day.get("sched") or []
-        if not date_label or not entries:
+        if not date_label:
             continue
 
         day_date = parse_day_label(date_label, current_year)
@@ -65,22 +75,27 @@ def get_schedule():
                 continue
 
             start = datetime.combine(day_date, t, tzinfo=TIMEZONE)
-            programs.append({"start": start, "title": title})
+            programs.append(
+                {
+                    "start": start,
+                    "title": title,
+                    "show_id": str(entry.get("show_id") or ""),
+                }
+            )
 
     programs.sort(key=lambda p: p["start"])
     return programs, logo
 
 
 def parse_day_label(label, year):
-    """Parse labels like 'Thursday, October 29' or 'Wednesday, October 28'."""
-    # Drop weekday if present
+    """Parse labels like 'Thursday, October 29'."""
     cleaned = re.sub(r"^[A-Za-z]+,\s*", "", label).strip()
-    for fmt in ("%B %d", "%b %d", "%B %d, %Y", "%b %d, %Y"):
+    for fmt in ("%B %d, %Y", "%b %d, %Y", "%B %d", "%b %d"):
         try:
-            dt = datetime.strptime(
-                cleaned if "%Y" in fmt else f"{cleaned}, {year}",
-                fmt if "%Y" in fmt else f"{fmt}, %Y",
-            )
+            if "%Y" in fmt:
+                dt = datetime.strptime(cleaned, fmt)
+            else:
+                dt = datetime.strptime(f"{cleaned}, {year}", f"{fmt}, %Y")
             return dt.date()
         except ValueError:
             continue
@@ -88,12 +103,7 @@ def parse_day_label(label, year):
 
 
 def parse_time(time_string):
-    formats = [
-        "%I:%M %p",
-        "%I:%M%p",
-        "%H:%M",
-        "%I %p",
-    ]
+    formats = ["%I:%M %p", "%I:%M%p", "%H:%M", "%I %p"]
     s = time_string.strip().upper().replace(".", "")
     for fmt in formats:
         try:
@@ -103,47 +113,50 @@ def parse_time(time_string):
     return None
 
 
+def xmltv_time(dt):
+    """XMLTV datetime: YYYYMMDDHHMMSS ±HHMM"""
+    return dt.strftime("%Y%m%d%H%M%S %z")
+
+
 def create_epg(programs, logo_url):
-    tv = Element(
-        "tv",
-        {
-            "generator-info-name": "Cinema One PH EPG Generator",
-            "generator-info-url": SOURCE_URL,
-        },
-    )
+    """Build formal XMLTV document."""
+    tv = Element("tv")
+    tv.set("generator-info-name", "Cinema One PH EPG Generator")
+    tv.set("generator-info-url", SOURCE_URL)
+    tv.set("source-info-name", "ClickTheCity")
+    tv.set("source-info-url", SOURCE_URL)
 
+    # --- channel ---
     channel = SubElement(tv, "channel", {"id": CHANNEL_ID})
-    display_name = SubElement(channel, "display-name")
-    display_name.text = CHANNEL_NAME
 
-    icon = SubElement(channel, "icon")
-    icon.set("src", logo_url)
+    dn1 = SubElement(channel, "display-name", {"lang": "en"})
+    dn1.text = CHANNEL_NAME
 
-    if not programs:
-        return tv
+    dn2 = SubElement(channel, "display-name", {"lang": "en"})
+    dn2.text = CHANNEL_NAME_ALT
 
+    SubElement(channel, "icon", {"src": logo_url})
+
+    url = SubElement(channel, "url")
+    url.text = SOURCE_URL
+
+    # --- programmes ---
     for index, program in enumerate(programs):
         start = program["start"]
 
         if index + 1 < len(programs):
             stop = programs[index + 1]["start"]
-            # Guard against zero/negative duration (duplicate times)
             if stop <= start:
                 stop = start + timedelta(hours=2)
         else:
-            # Last programme: assume 2 hours (better than forcing midnight
-            # when the list may span multiple calendar days)
             stop = start + timedelta(hours=2)
-
-        start_xml = start.strftime("%Y%m%d%H%M%S %z")
-        stop_xml = stop.strftime("%Y%m%d%H%M%S %z")
 
         programme = SubElement(
             tv,
             "programme",
             {
-                "start": start_xml,
-                "stop": stop_xml,
+                "start": xmltv_time(start),
+                "stop": xmltv_time(stop),
                 "channel": CHANNEL_ID,
             },
         )
@@ -154,31 +167,60 @@ def create_epg(programs, logo_url):
         desc = SubElement(programme, "desc", {"lang": "en"})
         desc.text = f"{program['title']} on {CHANNEL_NAME}"
 
+        category = SubElement(programme, "category", {"lang": "en"})
+        category.text = "Movie"
+
+        if program.get("show_id"):
+            episode = SubElement(programme, "episode-num", {"system": "clickthecity"})
+            episode.text = program["show_id"]
+
     return tv
 
 
+def write_pretty_xml(tv, path="epg.xml"):
+    """Write formal, indented XMLTV file with declaration."""
+    rough = tostring(tv, encoding="utf-8")
+    parsed = minidom.parseString(rough)
+    pretty = parsed.toprettyxml(indent="  ", encoding="utf-8")
+
+    lines = [
+        line
+        for line in pretty.decode("utf-8").splitlines()
+        if line.strip()
+    ]
+    if lines and lines[0].startswith("<?xml"):
+        lines[0] = '<?xml version="1.0" encoding="UTF-8"?>'
+    else:
+        lines.insert(0, '<?xml version="1.0" encoding="UTF-8"?>')
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
 def main():
-    print("Getting Cinema One PH schedule from API...")
+    print("Getting Cinema One PH schedule from ClickTheCity API...")
+    print(f"Source: {SOURCE_URL}")
+    print(f"API:    {API_URL}")
 
     programs, logo = get_schedule()
 
+    print(f"Found {len(programs)} programs.")
+    for p in programs[:10]:
+        print(f"  {p['start'].strftime('%Y-%m-%d %H:%M %Z')}  {p['title']}")
+    if len(programs) > 10:
+        print(f"  ... and {len(programs) - 10} more")
+
     if not programs:
-        raise Exception(
-            "No programs found in API response. "
-            "ClickTheCity schedule may be empty or the endpoint changed."
+        print(
+            "WARNING: ClickTheCity returned no programme listings right now. "
+            "Writing formal channel-only EPG (valid XMLTV). "
+            "Schedule will fill in automatically when their data is back."
         )
 
-    print(f"Found {len(programs)} programs.")
-    for p in programs[:5]:
-        print(f"  {p['start'].strftime('%Y-%m-%d %H:%M')}  {p['title']}")
-    if len(programs) > 5:
-        print(f"  ... and {len(programs) - 5} more")
-
     tv = create_epg(programs, logo)
-    tree = ElementTree(tv)
-    tree.write("epg.xml", encoding="utf-8", xml_declaration=True)
+    write_pretty_xml(tv, "epg.xml")
 
-    print("EPG generated successfully.")
+    print("EPG generated successfully (formal XMLTV).")
     print("Output: epg.xml")
 
 
