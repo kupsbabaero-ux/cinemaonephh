@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-Cinema One PH EPG generator
-Source: https://www.clickthecity.com/tv/channels/cinema-one
-(via their JSON API — the page is a React SPA, HTML scrape no longer works)
+Multi-channel EPG generator (ClickTheCity)
+Channels:
+  - Cinema One PH  https://www.clickthecity.com/tv/channels/cinema-one
+  - ANC PH         https://www.clickthecity.com/tv/channels/anc
+  - ANC Global     https://www.clickthecity.com/tv/channels/anc  (same CTC feed)
+  - TV5            https://www.clickthecity.com/tv/channels/tv5
+  - A2Z            https://www.clickthecity.com/tv/channels/a2z-channel-11
 """
 
 import requests
@@ -11,15 +15,6 @@ from zoneinfo import ZoneInfo
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 import re
-
-SOURCE_URL = "https://www.clickthecity.com/tv/channels/cinema-one"
-API_URL = "https://www.clickthecity.com/api/tv/channels/cinema-one/schedule"
-
-# Keep your original ids + common IPTV-friendly aliases
-CHANNEL_ID = "cinema-one-ph"
-CHANNEL_NAME = "Cinema One PH"
-CHANNEL_NAME_ALT = "Cinema One"
-CHANNEL_LOGO_FALLBACK = "https://www.clickthecity.com/img/tv/ch82.png"
 
 TIMEZONE = ZoneInfo("Asia/Manila")
 
@@ -30,65 +25,58 @@ HEADERS = {
         "Chrome/140.0.0.0 Safari/537.36"
     ),
     "Accept": "application/json",
-    "Referer": SOURCE_URL,
 }
 
+# Do not remove any channel — keep all requested
+CHANNELS = [
+    {
+        "id": "cinema-one-ph",
+        "names": ["Cinema One PH", "Cinema One"],
+        "slug": "cinema-one",
+        "page": "https://www.clickthecity.com/tv/channels/cinema-one",
+        "logo": "https://www.clickthecity.com/img/tv/ch82.png",
+        "category": "Movie",
+    },
+    {
+        "id": "anc-ph",
+        "names": ["ANC PH", "ANC", "ABS-CBN News Channel"],
+        "slug": "anc",
+        "page": "https://www.clickthecity.com/tv/channels/anc",
+        "logo": "https://www.clickthecity.com/img/tv/ch13.png",
+        "category": "News",
+    },
+    {
+        "id": "anc-global",
+        "names": ["ANC Global", "ANC International"],
+        "slug": "anc",  # ClickTheCity has one ANC feed; used for both PH + Global ids
+        "page": "https://www.clickthecity.com/tv/channels/anc",
+        "logo": "https://www.clickthecity.com/img/tv/ch13.png",
+        "category": "News",
+    },
+    {
+        "id": "tv5-ph",
+        "names": ["TV5", "TV 5"],
+        "slug": "tv5",
+        "page": "https://www.clickthecity.com/tv/channels/tv5",
+        "logo": "https://www.clickthecity.com/img/tv/ch5.png",
+        "category": "General",
+    },
+    {
+        "id": "a2z-ph",
+        "names": ["A2Z", "A2Z Channel 11"],
+        "slug": "a2z-channel-11",
+        "page": "https://www.clickthecity.com/tv/channels/a2z-channel-11",
+        "logo": "https://cdn1.clickthecity.com/wp-content/uploads/2020/10/21172907/a2z-logo-300x300.png",
+        "category": "General",
+    },
+]
 
-def get_schedule():
-    """Fetch schedule from ClickTheCity API (same site as SOURCE_URL)."""
-    response = requests.get(API_URL, headers=HEADERS, timeout=30)
-    response.raise_for_status()
-    payload = response.json()
 
-    if not payload.get("status"):
-        raise Exception(
-            f"API returned error: {payload.get('message', 'unknown')}"
-        )
-
-    data = payload.get("data") or {}
-    days = data.get("sched") or []
-    logo = (data.get("details") or {}).get("logo") or CHANNEL_LOGO_FALLBACK
-
-    programs = []
-    current_year = datetime.now(TIMEZONE).year
-
-    for day in days:
-        date_label = (day.get("date") or "").strip()
-        entries = day.get("sched") or []
-        if not date_label:
-            continue
-
-        day_date = parse_day_label(date_label, current_year)
-        if day_date is None:
-            print(f"Skipping unparseable date: {date_label!r}")
-            continue
-
-        for entry in entries:
-            time_str = (entry.get("time") or "").strip()
-            title = (entry.get("title") or "").strip()
-            if not time_str or not title:
-                continue
-
-            t = parse_time(time_str)
-            if t is None:
-                print(f"Skipping unparseable time: {time_str!r} ({title})")
-                continue
-
-            start = datetime.combine(day_date, t, tzinfo=TIMEZONE)
-            programs.append(
-                {
-                    "start": start,
-                    "title": title,
-                    "show_id": str(entry.get("show_id") or ""),
-                }
-            )
-
-    programs.sort(key=lambda p: p["start"])
-    return programs, logo
+def api_url(slug):
+    return f"https://www.clickthecity.com/api/tv/channels/{slug}/schedule"
 
 
 def parse_day_label(label, year):
-    """Parse labels like 'Thursday, October 29'."""
     cleaned = re.sub(r"^[A-Za-z]+,\s*", "", label).strip()
     for fmt in ("%B %d, %Y", "%b %d, %Y", "%B %d", "%b %d"):
         try:
@@ -114,42 +102,94 @@ def parse_time(time_string):
 
 
 def xmltv_time(dt):
-    """XMLTV datetime: YYYYMMDDHHMMSS ±HHMM"""
     return dt.strftime("%Y%m%d%H%M%S %z")
 
 
-def create_epg(programs, logo_url):
-    """Build formal XMLTV document."""
-    tv = Element("tv")
-    tv.set("generator-info-name", "Cinema One PH EPG Generator")
-    tv.set("generator-info-url", SOURCE_URL)
-    tv.set("source-info-name", "ClickTheCity")
-    tv.set("source-info-url", SOURCE_URL)
+def fetch_channel_schedule(channel):
+    """Return (programs list, logo_url). programs may be empty if CTC has no data."""
+    url = api_url(channel["slug"])
+    print(f"  Fetching {channel['names'][0]} ...")
+    print(f"    {url}")
 
-    # --- channel ---
-    channel = SubElement(tv, "channel", {"id": CHANNEL_ID})
+    try:
+        response = requests.get(
+            url,
+            headers={**HEADERS, "Referer": channel["page"]},
+            timeout=30,
+        )
+        response.raise_for_status()
+        payload = response.json()
+    except Exception as exc:
+        print(f"    ERROR: {exc}")
+        return [], channel["logo"]
 
-    dn1 = SubElement(channel, "display-name", {"lang": "en"})
-    dn1.text = CHANNEL_NAME
+    if not payload.get("status"):
+        print(f"    API message: {payload.get('message', 'unknown')}")
+        return [], channel["logo"]
 
-    dn2 = SubElement(channel, "display-name", {"lang": "en"})
-    dn2.text = CHANNEL_NAME_ALT
+    data = payload.get("data") or {}
+    logo = (data.get("details") or {}).get("logo") or channel["logo"]
+    days = data.get("sched") or []
+    year = datetime.now(TIMEZONE).year
+    programs = []
 
-    SubElement(channel, "icon", {"src": logo_url})
+    for day in days:
+        date_label = (day.get("date") or "").strip()
+        entries = day.get("sched") or []
+        if not date_label:
+            continue
 
-    url = SubElement(channel, "url")
-    url.text = SOURCE_URL
+        day_date = parse_day_label(date_label, year)
+        if day_date is None:
+            print(f"    Skipping date: {date_label!r}")
+            continue
 
-    # --- programmes ---
+        for entry in entries:
+            time_str = (entry.get("time") or "").strip()
+            title = (entry.get("title") or "").strip()
+            if not time_str or not title:
+                continue
+            t = parse_time(time_str)
+            if t is None:
+                print(f"    Skipping time: {time_str!r} ({title})")
+                continue
+            start = datetime.combine(day_date, t, tzinfo=TIMEZONE)
+            programs.append(
+                {
+                    "start": start,
+                    "title": title,
+                    "show_id": str(entry.get("show_id") or ""),
+                }
+            )
+
+    programs.sort(key=lambda p: p["start"])
+    print(f"    Found {len(programs)} programs")
+    for p in programs[:5]:
+        print(f"      {p['start'].strftime('%Y-%m-%d %H:%M')}  {p['title']}")
+    if len(programs) > 5:
+        print(f"      ... +{len(programs) - 5} more")
+    return programs, logo
+
+
+def add_channel_element(tv, channel, logo_url):
+    ch = SubElement(tv, "channel", {"id": channel["id"]})
+    for name in channel["names"]:
+        dn = SubElement(ch, "display-name", {"lang": "en"})
+        dn.text = name
+    SubElement(ch, "icon", {"src": logo_url})
+    url = SubElement(ch, "url")
+    url.text = channel["page"]
+
+
+def add_programmes(tv, channel, programs):
     for index, program in enumerate(programs):
         start = program["start"]
-
         if index + 1 < len(programs):
             stop = programs[index + 1]["start"]
             if stop <= start:
-                stop = start + timedelta(hours=2)
+                stop = start + timedelta(hours=1)
         else:
-            stop = start + timedelta(hours=2)
+            stop = start + timedelta(hours=1)
 
         programme = SubElement(
             tv,
@@ -157,71 +197,82 @@ def create_epg(programs, logo_url):
             {
                 "start": xmltv_time(start),
                 "stop": xmltv_time(stop),
-                "channel": CHANNEL_ID,
+                "channel": channel["id"],
             },
         )
-
         title = SubElement(programme, "title", {"lang": "en"})
         title.text = program["title"]
 
         desc = SubElement(programme, "desc", {"lang": "en"})
-        desc.text = f"{program['title']} on {CHANNEL_NAME}"
+        desc.text = f"{program['title']} on {channel['names'][0]}"
 
-        category = SubElement(programme, "category", {"lang": "en"})
-        category.text = "Movie"
+        cat = SubElement(programme, "category", {"lang": "en"})
+        cat.text = channel.get("category") or "General"
 
         if program.get("show_id"):
-            episode = SubElement(programme, "episode-num", {"system": "clickthecity"})
-            episode.text = program["show_id"]
-
-    return tv
+            ep = SubElement(programme, "episode-num", {"system": "clickthecity"})
+            ep.text = program["show_id"]
 
 
 def write_pretty_xml(tv, path="epg.xml"):
-    """Write formal, indented XMLTV file with declaration."""
     rough = tostring(tv, encoding="utf-8")
     parsed = minidom.parseString(rough)
     pretty = parsed.toprettyxml(indent="  ", encoding="utf-8")
-
-    lines = [
-        line
-        for line in pretty.decode("utf-8").splitlines()
-        if line.strip()
-    ]
+    lines = [line for line in pretty.decode("utf-8").splitlines() if line.strip()]
     if lines and lines[0].startswith("<?xml"):
         lines[0] = '<?xml version="1.0" encoding="UTF-8"?>'
     else:
         lines.insert(0, '<?xml version="1.0" encoding="UTF-8"?>')
-
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
 
 
 def main():
-    print("Getting Cinema One PH schedule from ClickTheCity API...")
-    print(f"Source: {SOURCE_URL}")
-    print(f"API:    {API_URL}")
+    print("Generating multi-channel EPG from ClickTheCity...")
+    print(f"Channels: {len(CHANNELS)}")
+    print()
 
-    programs, logo = get_schedule()
+    tv = Element("tv")
+    tv.set("generator-info-name", "ClickTheCity Multi-Channel EPG Generator")
+    tv.set("generator-info-url", "https://www.clickthecity.com/tv/")
+    tv.set("source-info-name", "ClickTheCity")
+    tv.set("source-info-url", "https://www.clickthecity.com/tv/")
 
-    print(f"Found {len(programs)} programs.")
-    for p in programs[:10]:
-        print(f"  {p['start'].strftime('%Y-%m-%d %H:%M %Z')}  {p['title']}")
-    if len(programs) > 10:
-        print(f"  ... and {len(programs) - 10} more")
+    # Cache by slug so ANC PH + ANC Global only hit API once
+    schedule_cache = {}
 
-    if not programs:
-        print(
-            "WARNING: ClickTheCity returned no programme listings right now. "
-            "Writing formal channel-only EPG (valid XMLTV). "
-            "Schedule will fill in automatically when their data is back."
-        )
+    channel_results = []
+    for channel in CHANNELS:
+        slug = channel["slug"]
+        if slug not in schedule_cache:
+            schedule_cache[slug] = fetch_channel_schedule(channel)
+        programs, logo = schedule_cache[slug]
+        channel_results.append((channel, programs, logo))
 
-    tv = create_epg(programs, logo)
+    # Channels first (XMLTV convention)
+    for channel, programs, logo in channel_results:
+        add_channel_element(tv, channel, logo)
+
+    # Then programmes
+    total = 0
+    for channel, programs, logo in channel_results:
+        add_programmes(tv, channel, programs)
+        total += len(programs)
+
     write_pretty_xml(tv, "epg.xml")
 
+    print()
+    print(f"Total programmes: {total}")
     print("EPG generated successfully (formal XMLTV).")
     print("Output: epg.xml")
+
+    empty = [c["names"][0] for c, p, _ in channel_results if not p]
+    if empty:
+        print(
+            "Note: no listings right now for: "
+            + ", ".join(empty)
+            + " (ClickTheCity empty/unavailable — will fill on next run when data is back)."
+        )
 
 
 if __name__ == "__main__":
