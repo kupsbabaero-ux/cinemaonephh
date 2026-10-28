@@ -1,11 +1,11 @@
-import re
 import requests
-from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
-from xml.etree.ElementTree import Element, SubElement, ElementTree, indent
+from xml.etree.ElementTree import Element, SubElement, ElementTree
+import re
 
 SOURCE_URL = "https://www.clickthecity.com/tv/channels/cinema-one"
+API_URL = "https://www.clickthecity.com/api/tv/channels/cinema-one/schedule"
 
 CHANNEL_ID = "cinema-one-ph"
 CHANNEL_NAME = "Cinema One PH"
@@ -18,285 +18,168 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/140.0.0.0 Safari/537.36"
     ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
+    "Accept": "application/json",
 }
 
 
-def get_page():
-    print("Downloading ClickTheCity page...")
-
-    response = requests.get(
-        SOURCE_URL,
-        headers=HEADERS,
-        timeout=30
-    )
-
-    print("HTTP status:", response.status_code)
-    print("Final URL:", response.url)
-
+def get_schedule():
+    """Fetch schedule from ClickTheCity API (site is a React SPA; HTML scrape no longer works)."""
+    response = requests.get(API_URL, headers=HEADERS, timeout=30)
     response.raise_for_status()
+    payload = response.json()
 
-    if not response.text.strip():
-        raise Exception("ClickTheCity returned an empty page.")
-
-    return response.text
-
-
-def parse_schedule(html):
-    soup = BeautifulSoup(html, "html.parser")
-
-    programs = []
-
-    # Remove scripts/styles
-    for tag in soup(["script", "style", "noscript"]):
-        tag.decompose()
-
-    text = soup.get_text("\n", strip=True)
-
-    # Normalize spaces
-    lines = []
-
-    for line in text.splitlines():
-        line = re.sub(r"\s+", " ", line).strip()
-
-        if line:
-            lines.append(line)
-
-    # Time patterns:
-    # 12:00 AM
-    # 1:30 PM
-    # 13:30
-    time_pattern = re.compile(
-        r"^(?P<time>"
-        r"(?:0?[1-9]|1[0-2]):[0-5][0-9]\s*(?:AM|PM)"
-        r"|"
-        r"(?:[01]?[0-9]|2[0-3]):[0-5][0-9]"
-        r")"
-        r"(?:\s*[-–—]\s*)?"
-        r"(?P<title>.+)$",
-        re.IGNORECASE
-    )
-
-    for line in lines:
-        match = time_pattern.match(line)
-
-        if not match:
-            continue
-
-        time_part = match.group("time").strip()
-        title = match.group("title").strip()
-
-        title = re.sub(r"^[\-–—:|]+", "", title).strip()
-
-        if not title:
-            continue
-
-        # Avoid navigation/header junk
-        ignored = {
-            "cinema one",
-            "tv guide",
-            "schedule",
-            "program schedule",
-        }
-
-        if title.lower() in ignored:
-            continue
-
-        programs.append({
-            "time": time_part,
-            "title": title
-        })
-
-    # Remove duplicates
-    unique = []
-    seen = set()
-
-    for program in programs:
-        key = (
-            program["time"].lower(),
-            program["title"].lower()
+    if not payload.get("status"):
+        raise Exception(
+            f"API returned error: {payload.get('message', 'unknown')}"
         )
 
-        if key not in seen:
-            seen.add(key)
-            unique.append(program)
+    data = payload.get("data") or {}
+    days = data.get("sched") or []
+    logo = (data.get("details") or {}).get("logo") or (
+        "https://www.clickthecity.com/img/tv/ch82.png"
+    )
 
-    return unique
+    programs = []
+    current_year = datetime.now(TIMEZONE).year
+
+    for day in days:
+        date_label = (day.get("date") or "").strip()
+        entries = day.get("sched") or []
+        if not date_label or not entries:
+            continue
+
+        day_date = parse_day_label(date_label, current_year)
+        if day_date is None:
+            print(f"Skipping unparseable date: {date_label!r}")
+            continue
+
+        for entry in entries:
+            time_str = (entry.get("time") or "").strip()
+            title = (entry.get("title") or "").strip()
+            if not time_str or not title:
+                continue
+
+            t = parse_time(time_str)
+            if t is None:
+                print(f"Skipping unparseable time: {time_str!r} ({title})")
+                continue
+
+            start = datetime.combine(day_date, t, tzinfo=TIMEZONE)
+            programs.append({"start": start, "title": title})
+
+    programs.sort(key=lambda p: p["start"])
+    return programs, logo
 
 
-def parse_time(value):
+def parse_day_label(label, year):
+    """Parse labels like 'Thursday, October 29' or 'Wednesday, October 28'."""
+    # Drop weekday if present
+    cleaned = re.sub(r"^[A-Za-z]+,\s*", "", label).strip()
+    for fmt in ("%B %d", "%b %d", "%B %d, %Y", "%b %d, %Y"):
+        try:
+            dt = datetime.strptime(
+                cleaned if "%Y" in fmt else f"{cleaned}, {year}",
+                fmt if "%Y" in fmt else f"{fmt}, %Y",
+            )
+            return dt.date()
+        except ValueError:
+            continue
+    return None
+
+
+def parse_time(time_string):
     formats = [
         "%I:%M %p",
         "%I:%M%p",
         "%H:%M",
+        "%I %p",
     ]
-
-    value = value.strip().upper()
-
+    s = time_string.strip().upper().replace(".", "")
     for fmt in formats:
         try:
-            return datetime.strptime(value, fmt).time()
+            return datetime.strptime(s, fmt).time()
         except ValueError:
-            continue
-
+            pass
     return None
 
 
-def create_epg(programs):
+def create_epg(programs, logo_url):
     tv = Element(
         "tv",
         {
             "generator-info-name": "Cinema One PH EPG Generator",
-            "generator-info-url": SOURCE_URL
-        }
+            "generator-info-url": SOURCE_URL,
+        },
     )
 
-    channel = SubElement(
-        tv,
-        "channel",
-        {"id": CHANNEL_ID}
-    )
-
-    display_name = SubElement(
-        channel,
-        "display-name"
-    )
-
+    channel = SubElement(tv, "channel", {"id": CHANNEL_ID})
+    display_name = SubElement(channel, "display-name")
     display_name.text = CHANNEL_NAME
 
-    today = datetime.now(TIMEZONE).date()
+    icon = SubElement(channel, "icon")
+    icon.set("src", logo_url)
 
-    for day_offset in range(7):
+    if not programs:
+        return tv
 
-        current_date = today + timedelta(days=day_offset)
+    for index, program in enumerate(programs):
+        start = program["start"]
 
-        daily = []
-
-        for program in programs:
-
-            program_time = parse_time(program["time"])
-
-            if program_time is None:
-                continue
-
-            start = datetime.combine(
-                current_date,
-                program_time,
-                tzinfo=TIMEZONE
-            )
-
-            daily.append({
-                "start": start,
-                "title": program["title"]
-            })
-
-        daily.sort(key=lambda x: x["start"])
-
-        for index, program in enumerate(daily):
-
-            start = program["start"]
-
-            if index + 1 < len(daily):
-                stop = daily[index + 1]["start"]
-            else:
-                stop = datetime.combine(
-                    current_date + timedelta(days=1),
-                    datetime.min.time(),
-                    tzinfo=TIMEZONE
-                )
-
-            # Prevent invalid duration
+        if index + 1 < len(programs):
+            stop = programs[index + 1]["start"]
+            # Guard against zero/negative duration (duplicate times)
             if stop <= start:
-                stop = start + timedelta(minutes=30)
+                stop = start + timedelta(hours=2)
+        else:
+            # Last programme: assume 2 hours (better than forcing midnight
+            # when the list may span multiple calendar days)
+            stop = start + timedelta(hours=2)
 
-            programme = SubElement(
-                tv,
-                "programme",
-                {
-                    "start": start.strftime("%Y%m%d%H%M%S %z"),
-                    "stop": stop.strftime("%Y%m%d%H%M%S %z"),
-                    "channel": CHANNEL_ID
-                }
-            )
+        start_xml = start.strftime("%Y%m%d%H%M%S %z")
+        stop_xml = stop.strftime("%Y%m%d%H%M%S %z")
 
-            title = SubElement(
-                programme,
-                "title",
-                {"lang": "en"}
-            )
+        programme = SubElement(
+            tv,
+            "programme",
+            {
+                "start": start_xml,
+                "stop": stop_xml,
+                "channel": CHANNEL_ID,
+            },
+        )
 
-            title.text = program["title"]
+        title = SubElement(programme, "title", {"lang": "en"})
+        title.text = program["title"]
 
-            desc = SubElement(
-                programme,
-                "desc",
-                {"lang": "en"}
-            )
-
-            desc.text = (
-                f"{program['title']} on {CHANNEL_NAME}"
-            )
+        desc = SubElement(programme, "desc", {"lang": "en"})
+        desc.text = f"{program['title']} on {CHANNEL_NAME}"
 
     return tv
 
 
 def main():
+    print("Getting Cinema One PH schedule from API...")
 
-    print("=" * 50)
-    print("Cinema One PH EPG Generator")
-    print("=" * 50)
-
-    html = get_page()
-
-    print("Parsing schedule...")
-
-    programs = parse_schedule(html)
-
-    print("Programs found:", len(programs))
+    programs, logo = get_schedule()
 
     if not programs:
-        # Save page for debugging
-        with open(
-            "clickthecity_debug.html",
-            "w",
-            encoding="utf-8"
-        ) as file:
-            file.write(html)
-
         raise Exception(
-            "No Cinema One programs found. "
-            "clickthecity_debug.html was created."
+            "No programs found in API response. "
+            "ClickTheCity schedule may be empty or the endpoint changed."
         )
 
-    print()
-    print("Detected programs:")
+    print(f"Found {len(programs)} programs.")
+    for p in programs[:5]:
+        print(f"  {p['start'].strftime('%Y-%m-%d %H:%M')}  {p['title']}")
+    if len(programs) > 5:
+        print(f"  ... and {len(programs) - 5} more")
 
-    for program in programs:
-        print(
-            f"- {program['time']} | "
-            f"{program['title']}"
-        )
-
-    print()
-    print("Generating 7-day EPG...")
-
-    tv = create_epg(programs)
-
-    indent(tv, space="  ")
-
+    tv = create_epg(programs, logo)
     tree = ElementTree(tv)
+    tree.write("epg.xml", encoding="utf-8", xml_declaration=True)
 
-    tree.write(
-        "epg.xml",
-        encoding="utf-8",
-        xml_declaration=True
-    )
-
-    print()
     print("EPG generated successfully.")
-    print("File: epg.xml")
-    print("Days: 7")
+    print("Output: epg.xml")
 
 
 if __name__ == "__main__":
