@@ -31,763 +31,727 @@
     <icon src="https://cdn1.clickthecity.com/wp-content/uploads/2020/10/21172907/a2z-logo-300x300.png"/>
     <url>https://www.clickthecity.com/tv/channels/a2z-channel-11</url>
   </channel>
-  <programme start="20261105050000 +0800" stop="20261105070000 +0800" channel="cinema-one-ph">
-    <title lang="en">Juan Tanga Super Naman</title>
-    <desc lang="en">Juan Tanga Super Naman on Cinema One PH</desc>
+  <programme start="20261106050000 +0800" stop="20261106070000 +0800" channel="cinema-one-ph">
+    <title lang="en">Always In My Heart</title>
+    <desc lang="en">Always In My Heart on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">22960</episode-num>
+    <episode-num system="clickthecity">9965</episode-num>
   </programme>
-  <programme start="20261105070000 +0800" stop="20261105090000 +0800" channel="cinema-one-ph">
-    <title lang="en">Batang PX</title>
-    <desc lang="en">Batang PX on Cinema One PH</desc>
+  <programme start="20261106070000 +0800" stop="20261106090000 +0800" channel="cinema-one-ph">
+    <title lang="en">Papa's Girl</title>
+    <desc lang="en">Papa's Girl on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">2115</episode-num>
+    <episode-num system="clickthecity">3873</episode-num>
   </programme>
-  <programme start="20261105090000 +0800" stop="20261105110000 +0800" channel="cinema-one-ph">
-    <title lang="en">Trip</title>
-    <desc lang="en">Trip on Cinema One PH</desc>
+  <programme start="20261106090000 +0800" stop="20261106110000 +0800" channel="cinema-one-ph">
+    <title lang="en">I Do! I Die! D'yos Ko Day!</title>
+    <desc lang="en">I Do! I Die! D'yos Ko Day! on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">17042</episode-num>
+    <episode-num system="clickthecity">1731</episode-num>
   </programme>
-  <programme start="20261105110000 +0800" stop="20261105130000 +0800" channel="cinema-one-ph">
-    <title lang="en">Ang Tanging Pamilya</title>
-    <desc lang="en">Ang Tanging Pamilya on Cinema One PH</desc>
+  <programme start="20261106110000 +0800" stop="20261106130000 +0800" channel="cinema-one-ph">
+    <title lang="en">Basta't Kasama Kita</title>
+    <desc lang="en">Basta't Kasama Kita on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">65291</episode-num>
+    <episode-num system="clickthecity">18012</episode-num>
   </programme>
-  <programme start="20261105130000 +0800" stop="20261105150000 +0800" channel="cinema-one-ph">
-    <title lang="en">Ako Legal Wife</title>
-    <desc lang="en">Ako Legal Wife on Cinema One PH</desc>
+  <programme start="20261106130000 +0800" stop="20261106150000 +0800" channel="cinema-one-ph">
+    <title lang="en">Iskalawag Ang Batas Ay Batas</title>
+    <desc lang="en">Iskalawag Ang Batas Ay Batas on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">36372</episode-num>
+    <episode-num system="clickthecity">38333</episode-num>
   </programme>
-  <programme start="20261105150000 +0800" stop="20261105170000 +0800" channel="cinema-one-ph">
-    <title lang="en">My Perfect You</title>
-    <desc lang="en">My Perfect You on Cinema One PH</desc>
+  <programme start="20261106150000 +0800" stop="20261106160000 +0800" channel="cinema-one-ph">
+    <title lang="en">The B Side</title>
+    <desc lang="en">The B Side on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">106130</episode-num>
+    <episode-num system="clickthecity">117040</episode-num>
   </programme>
-  <programme start="20261105170000 +0800" stop="20261105190000 +0800" channel="cinema-one-ph">
-    <title lang="en">Exes Baggage</title>
-    <desc lang="en">Exes Baggage on Cinema One PH</desc>
+  <programme start="20261106160000 +0800" stop="20261106180000 +0800" channel="cinema-one-ph">
+    <title lang="en">Bakit Hindi ka Crush Ng Crush Mo</title>
+    <desc lang="en">Bakit Hindi ka Crush Ng Crush Mo on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">107679</episode-num>
+    <episode-num system="clickthecity">86880</episode-num>
   </programme>
-  <programme start="20261105190000 +0800" stop="20261105210000 +0800" channel="cinema-one-ph">
-    <title lang="en">Forevermore</title>
-    <desc lang="en">Forevermore on Cinema One PH</desc>
+  <programme start="20261106180000 +0800" stop="20261106200000 +0800" channel="cinema-one-ph">
+    <title lang="en">The Unkabogable Praybeyt Benjamin</title>
+    <desc lang="en">The Unkabogable Praybeyt Benjamin on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">18073</episode-num>
+    <episode-num system="clickthecity">90969</episode-num>
   </programme>
-  <programme start="20261105210000 +0800" stop="20261105230000 +0800" channel="cinema-one-ph">
-    <title lang="en">Pardina at mga Duwende</title>
-    <desc lang="en">Pardina at mga Duwende on Cinema One PH</desc>
+  <programme start="20261106200000 +0800" stop="20261106220000 +0800" channel="cinema-one-ph">
+    <title lang="en">Till There Was You</title>
+    <desc lang="en">Till There Was You on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">10540</episode-num>
+    <episode-num system="clickthecity">11281</episode-num>
   </programme>
-  <programme start="20261105230000 +0800" stop="20261106010000 +0800" channel="cinema-one-ph">
-    <title lang="en">John Wick Chapter 3: Parabellum</title>
-    <desc lang="en">John Wick Chapter 3: Parabellum on Cinema One PH</desc>
+  <programme start="20261106220000 +0800" stop="20261107000000 +0800" channel="cinema-one-ph">
+    <title lang="en">Tunay Na Tunay (Gets Mo, Gets Ko)</title>
+    <desc lang="en">Tunay Na Tunay (Gets Mo, Gets Ko) on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">110299</episode-num>
+    <episode-num system="clickthecity">10173</episode-num>
   </programme>
-  <programme start="20261106010000 +0800" stop="20261106030000 +0800" channel="cinema-one-ph">
-    <title lang="en">Patikim Ng Pinya</title>
-    <desc lang="en">Patikim Ng Pinya on Cinema One PH</desc>
+  <programme start="20261107000000 +0800" stop="20261107020000 +0800" channel="cinema-one-ph">
+    <title lang="en">Kung Mangarap ka't Magising</title>
+    <desc lang="en">Kung Mangarap ka't Magising on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">2679</episode-num>
+    <episode-num system="clickthecity">5130</episode-num>
   </programme>
-  <programme start="20261106030000 +0800" stop="20261106040000 +0800" channel="cinema-one-ph">
-    <title lang="en">Pepeng Saclao (Public Enemy No.1)</title>
-    <desc lang="en">Pepeng Saclao (Public Enemy No.1) on Cinema One PH</desc>
+  <programme start="20261107020000 +0800" stop="20261107040000 +0800" channel="cinema-one-ph">
+    <title lang="en">Live Show</title>
+    <desc lang="en">Live Show on Cinema One PH</desc>
     <category lang="en">Movie</category>
-    <episode-num system="clickthecity">18597</episode-num>
+    <episode-num system="clickthecity">63930</episode-num>
   </programme>
-  <programme start="20261105053000 +0800" stop="20261105060000 +0800" channel="anc-ph">
-    <title lang="en">Mobil 1 The Grid</title>
-    <desc lang="en">Mobil 1 The Grid on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">55841</episode-num>
+  <programme start="20261107040000 +0800" stop="20261107050000 +0800" channel="cinema-one-ph">
+    <title lang="en">Lorna</title>
+    <desc lang="en">Lorna on Cinema One PH</desc>
+    <category lang="en">Movie</category>
+    <episode-num system="clickthecity">97378</episode-num>
   </programme>
-  <programme start="20261105060000 +0800" stop="20261105070000 +0800" channel="anc-ph">
-    <title lang="en">Business Roadshow</title>
-    <desc lang="en">Business Roadshow on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116875</episode-num>
-  </programme>
-  <programme start="20261105070000 +0800" stop="20261105073000 +0800" channel="anc-ph">
-    <title lang="en">ANC Rundown</title>
-    <desc lang="en">ANC Rundown on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">108576</episode-num>
-  </programme>
-  <programme start="20261105073000 +0800" stop="20261105080000 +0800" channel="anc-ph">
-    <title lang="en">Business Outlook</title>
-    <desc lang="en">Business Outlook on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116876</episode-num>
-  </programme>
-  <programme start="20261105080000 +0800" stop="20261105090000 +0800" channel="anc-ph">
-    <title lang="en">Headstart with Karen Davila</title>
-    <desc lang="en">Headstart with Karen Davila on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71239</episode-num>
-  </programme>
-  <programme start="20261105090000 +0800" stop="20261105100000 +0800" channel="anc-ph">
-    <title lang="en">Market Edge</title>
-    <desc lang="en">Market Edge on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">95402</episode-num>
-  </programme>
-  <programme start="20261105100000 +0800" stop="20261105103000 +0800" channel="anc-ph">
-    <title lang="en">#NoFilter</title>
-    <desc lang="en">#NoFilter on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">96578</episode-num>
-  </programme>
-  <programme start="20261105103000 +0800" stop="20261105110000 +0800" channel="anc-ph">
-    <title lang="en">Hot Copy on Headstart with Karen Davila</title>
-    <desc lang="en">Hot Copy on Headstart with Karen Davila on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71260</episode-num>
-  </programme>
-  <programme start="20261105110000 +0800" stop="20261105113000 +0800" channel="anc-ph">
-    <title lang="en">Tomorrow Today</title>
-    <desc lang="en">Tomorrow Today on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">17900</episode-num>
-  </programme>
-  <programme start="20261105113000 +0800" stop="20261105120000 +0800" channel="anc-ph">
-    <title lang="en">Tao Po!</title>
-    <desc lang="en">Tao Po! on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116451</episode-num>
-  </programme>
-  <programme start="20261105120000 +0800" stop="20261105130000 +0800" channel="anc-ph">
-    <title lang="en">Dateline Philippines</title>
-    <desc lang="en">Dateline Philippines on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71242</episode-num>
-  </programme>
-  <programme start="20261105130000 +0800" stop="20261105133000 +0800" channel="anc-ph">
-    <title lang="en">On Cue</title>
-    <desc lang="en">On Cue on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">115010</episode-num>
-  </programme>
-  <programme start="20261105133000 +0800" stop="20261105140000 +0800" channel="anc-ph">
+  <programme start="20261106053000 +0800" stop="20261106060000 +0800" channel="anc-ph">
     <title lang="en">Ride: Fei Originals</title>
     <desc lang="en">Ride: Fei Originals on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116874</episode-num>
   </programme>
-  <programme start="20261105140000 +0800" stop="20261105143000 +0800" channel="anc-ph">
-    <title lang="en">Global 3000</title>
-    <desc lang="en">Global 3000 on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">50264</episode-num>
-  </programme>
-  <programme start="20261105143000 +0800" stop="20261105150000 +0800" channel="anc-ph">
-    <title lang="en">At The Moment</title>
-    <desc lang="en">At The Moment on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116870</episode-num>
-  </programme>
-  <programme start="20261105150000 +0800" stop="20261105160000 +0800" channel="anc-ph">
+  <programme start="20261106060000 +0800" stop="20261106070000 +0800" channel="anc-ph">
     <title lang="en">Business Roadshow</title>
     <desc lang="en">Business Roadshow on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116875</episode-num>
   </programme>
-  <programme start="20261105160000 +0800" stop="20261105163000 +0800" channel="anc-ph">
-    <title lang="en">Executive Class</title>
-    <desc lang="en">Executive Class on ANC PH</desc>
+  <programme start="20261106070000 +0800" stop="20261106073000 +0800" channel="anc-ph">
+    <title lang="en">ANC Rundown</title>
+    <desc lang="en">ANC Rundown on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">71257</episode-num>
+    <episode-num system="clickthecity">108576</episode-num>
   </programme>
-  <programme start="20261105163000 +0800" stop="20261105170000 +0800" channel="anc-ph">
-    <title lang="en">Made in Germany</title>
-    <desc lang="en">Made in Germany on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">117387</episode-num>
-  </programme>
-  <programme start="20261105170000 +0800" stop="20261105180000 +0800" channel="anc-ph">
-    <title lang="en">Top Story</title>
-    <desc lang="en">Top Story on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71245</episode-num>
-  </programme>
-  <programme start="20261105180000 +0800" stop="20261105183000 +0800" channel="anc-ph">
-    <title lang="en">Rev</title>
-    <desc lang="en">Rev on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">104291</episode-num>
-  </programme>
-  <programme start="20261105183000 +0800" stop="20261105200000 +0800" channel="anc-ph">
-    <title lang="en">TV Patrol</title>
-    <desc lang="en">TV Patrol on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">32</episode-num>
-  </programme>
-  <programme start="20261105200000 +0800" stop="20261105203000 +0800" channel="anc-ph">
+  <programme start="20261106073000 +0800" stop="20261106080000 +0800" channel="anc-ph">
     <title lang="en">Business Outlook</title>
     <desc lang="en">Business Outlook on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116876</episode-num>
   </programme>
-  <programme start="20261105203000 +0800" stop="20261105210000 +0800" channel="anc-ph">
-    <title lang="en">Dayaw</title>
-    <desc lang="en">Dayaw on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">95404</episode-num>
-  </programme>
-  <programme start="20261105210000 +0800" stop="20261105213000 +0800" channel="anc-ph">
-    <title lang="en">The World Tonight</title>
-    <desc lang="en">The World Tonight on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71228</episode-num>
-  </programme>
-  <programme start="20261105213000 +0800" stop="20261105220000 +0800" channel="anc-ph">
-    <title lang="en">Rev</title>
-    <desc lang="en">Rev on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">104291</episode-num>
-  </programme>
-  <programme start="20261105220000 +0800" stop="20261105223000 +0800" channel="anc-ph">
-    <title lang="en">Arts.21</title>
-    <desc lang="en">Arts.21 on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116872</episode-num>
-  </programme>
-  <programme start="20261105223000 +0800" stop="20261105230000 +0800" channel="anc-ph">
-    <title lang="en">My Puhunan Kaya Mo!</title>
-    <desc lang="en">My Puhunan Kaya Mo! on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116538</episode-num>
-  </programme>
-  <programme start="20261105230000 +0800" stop="20261105233000 +0800" channel="anc-ph">
-    <title lang="en">Executive Class</title>
-    <desc lang="en">Executive Class on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71257</episode-num>
-  </programme>
-  <programme start="20261105233000 +0800" stop="20261106000000 +0800" channel="anc-ph">
-    <title lang="en">Asian Air Safari</title>
-    <desc lang="en">Asian Air Safari on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71248</episode-num>
-  </programme>
-  <programme start="20261106000000 +0800" stop="20261106003000 +0800" channel="anc-ph">
-    <title lang="en">The World Tonight</title>
-    <desc lang="en">The World Tonight on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71228</episode-num>
-  </programme>
-  <programme start="20261106003000 +0800" stop="20261106010000 +0800" channel="anc-ph">
-    <title lang="en">Women of Style</title>
-    <desc lang="en">Women of Style on ANC PH</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">105617</episode-num>
-  </programme>
-  <programme start="20261106010000 +0800" stop="20261106020000 +0800" channel="anc-ph">
+  <programme start="20261106080000 +0800" stop="20261106090000 +0800" channel="anc-ph">
     <title lang="en">Headstart with Karen Davila</title>
     <desc lang="en">Headstart with Karen Davila on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">71239</episode-num>
   </programme>
-  <programme start="20261106020000 +0800" stop="20261106023000 +0800" channel="anc-ph">
-    <title lang="en">#NoFilter</title>
-    <desc lang="en">#NoFilter on ANC PH</desc>
+  <programme start="20261106090000 +0800" stop="20261106100000 +0800" channel="anc-ph">
+    <title lang="en">Market Edge</title>
+    <desc lang="en">Market Edge on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">96578</episode-num>
+    <episode-num system="clickthecity">95402</episode-num>
   </programme>
-  <programme start="20261106023000 +0800" stop="20261106030000 +0800" channel="anc-ph">
-    <title lang="en">My Italy with Margarita</title>
-    <desc lang="en">My Italy with Margarita on ANC PH</desc>
+  <programme start="20261106100000 +0800" stop="20261106103000 +0800" channel="anc-ph">
+    <title lang="en">Local Legends</title>
+    <desc lang="en">Local Legends on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">109035</episode-num>
+    <episode-num system="clickthecity">107772</episode-num>
   </programme>
-  <programme start="20261106030000 +0800" stop="20261106033000 +0800" channel="anc-ph">
+  <programme start="20261106103000 +0800" stop="20261106110000 +0800" channel="anc-ph">
+    <title lang="en">Hot Copy on Headstart with Karen Davila</title>
+    <desc lang="en">Hot Copy on Headstart with Karen Davila on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71260</episode-num>
+  </programme>
+  <programme start="20261106110000 +0800" stop="20261106113000 +0800" channel="anc-ph">
+    <title lang="en">Global Us</title>
+    <desc lang="en">Global Us on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">41952</episode-num>
+  </programme>
+  <programme start="20261106113000 +0800" stop="20261106120000 +0800" channel="anc-ph">
+    <title lang="en">Rev</title>
+    <desc lang="en">Rev on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">104291</episode-num>
+  </programme>
+  <programme start="20261106120000 +0800" stop="20261106130000 +0800" channel="anc-ph">
+    <title lang="en">Dateline Philippines</title>
+    <desc lang="en">Dateline Philippines on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71242</episode-num>
+  </programme>
+  <programme start="20261106130000 +0800" stop="20261106140000 +0800" channel="anc-ph">
+    <title lang="en">24x24</title>
+    <desc lang="en">24x24 on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116877</episode-num>
+  </programme>
+  <programme start="20261106140000 +0800" stop="20261106143000 +0800" channel="anc-ph">
+    <title lang="en">In Good Shape</title>
+    <desc lang="en">In Good Shape on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">50263</episode-num>
+  </programme>
+  <programme start="20261106143000 +0800" stop="20261106150000 +0800" channel="anc-ph">
+    <title lang="en">Dayaw</title>
+    <desc lang="en">Dayaw on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">95404</episode-num>
+  </programme>
+  <programme start="20261106150000 +0800" stop="20261106160000 +0800" channel="anc-ph">
+    <title lang="en">Business Roadshow</title>
+    <desc lang="en">Business Roadshow on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116875</episode-num>
+  </programme>
+  <programme start="20261106160000 +0800" stop="20261106163000 +0800" channel="anc-ph">
+    <title lang="en">Beyond The Exchange</title>
+    <desc lang="en">Beyond The Exchange on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">117905</episode-num>
+  </programme>
+  <programme start="20261106163000 +0800" stop="20261106170000 +0800" channel="anc-ph">
+    <title lang="en">Tomorrow Today</title>
+    <desc lang="en">Tomorrow Today on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">17900</episode-num>
+  </programme>
+  <programme start="20261106170000 +0800" stop="20261106180000 +0800" channel="anc-ph">
+    <title lang="en">Top Story</title>
+    <desc lang="en">Top Story on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71245</episode-num>
+  </programme>
+  <programme start="20261106180000 +0800" stop="20261106183000 +0800" channel="anc-ph">
+    <title lang="en">LSS: The Martin Nievera Show</title>
+    <desc lang="en">LSS: The Martin Nievera Show on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">108574</episode-num>
+  </programme>
+  <programme start="20261106183000 +0800" stop="20261106200000 +0800" channel="anc-ph">
+    <title lang="en">TV Patrol</title>
+    <desc lang="en">TV Patrol on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">32</episode-num>
+  </programme>
+  <programme start="20261106200000 +0800" stop="20261106203000 +0800" channel="anc-ph">
+    <title lang="en">Business Outlook</title>
+    <desc lang="en">Business Outlook on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116876</episode-num>
+  </programme>
+  <programme start="20261106203000 +0800" stop="20261106210000 +0800" channel="anc-ph">
     <title lang="en">At The Moment</title>
     <desc lang="en">At The Moment on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116870</episode-num>
   </programme>
-  <programme start="20261106033000 +0800" stop="20261106040000 +0800" channel="anc-ph">
-    <title lang="en">Casa Daza</title>
-    <desc lang="en">Casa Daza on ANC PH</desc>
+  <programme start="20261106210000 +0800" stop="20261106213000 +0800" channel="anc-ph">
+    <title lang="en">The World Tonight</title>
+    <desc lang="en">The World Tonight on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">100981</episode-num>
+    <episode-num system="clickthecity">71228</episode-num>
   </programme>
-  <programme start="20261106040000 +0800" stop="20261106043000 +0800" channel="anc-ph">
-    <title lang="en">Dwellings</title>
-    <desc lang="en">Dwellings on ANC PH</desc>
+  <programme start="20261106213000 +0800" stop="20261106220000 +0800" channel="anc-ph">
+    <title lang="en">LSS: The Martin Nievera Show</title>
+    <desc lang="en">LSS: The Martin Nievera Show on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">116871</episode-num>
+    <episode-num system="clickthecity">108574</episode-num>
   </programme>
-  <programme start="20261106043000 +0800" stop="20261106053000 +0800" channel="anc-ph">
-    <title lang="en">Arts.21</title>
-    <desc lang="en">Arts.21 on ANC PH</desc>
+  <programme start="20261106220000 +0800" stop="20261106223000 +0800" channel="anc-ph">
+    <title lang="en">Made in Germany</title>
+    <desc lang="en">Made in Germany on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">116872</episode-num>
+    <episode-num system="clickthecity">117387</episode-num>
   </programme>
-  <programme start="20261105053000 +0800" stop="20261105060000 +0800" channel="anc-global">
-    <title lang="en">Mobil 1 The Grid</title>
-    <desc lang="en">Mobil 1 The Grid on ANC Global</desc>
+  <programme start="20261106223000 +0800" stop="20261106230000 +0800" channel="anc-ph">
+    <title lang="en">Rev</title>
+    <desc lang="en">Rev on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">55841</episode-num>
+    <episode-num system="clickthecity">104291</episode-num>
   </programme>
-  <programme start="20261105060000 +0800" stop="20261105070000 +0800" channel="anc-global">
-    <title lang="en">Business Roadshow</title>
-    <desc lang="en">Business Roadshow on ANC Global</desc>
+  <programme start="20261106230000 +0800" stop="20261107000000 +0800" channel="anc-ph">
+    <title lang="en">Chasing Flavors</title>
+    <desc lang="en">Chasing Flavors on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">116875</episode-num>
+    <episode-num system="clickthecity">101515</episode-num>
   </programme>
-  <programme start="20261105070000 +0800" stop="20261105073000 +0800" channel="anc-global">
-    <title lang="en">ANC Rundown</title>
-    <desc lang="en">ANC Rundown on ANC Global</desc>
+  <programme start="20261107000000 +0800" stop="20261107003000 +0800" channel="anc-ph">
+    <title lang="en">The World Tonight</title>
+    <desc lang="en">The World Tonight on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">108576</episode-num>
+    <episode-num system="clickthecity">71228</episode-num>
   </programme>
-  <programme start="20261105073000 +0800" stop="20261105080000 +0800" channel="anc-global">
-    <title lang="en">Business Outlook</title>
-    <desc lang="en">Business Outlook on ANC Global</desc>
+  <programme start="20261107003000 +0800" stop="20261107010000 +0800" channel="anc-ph">
+    <title lang="en">Insight with April Lee-Tan</title>
+    <desc lang="en">Insight with April Lee-Tan on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">116876</episode-num>
+    <episode-num system="clickthecity">915</episode-num>
   </programme>
-  <programme start="20261105080000 +0800" stop="20261105090000 +0800" channel="anc-global">
+  <programme start="20261107010000 +0800" stop="20261107020000 +0800" channel="anc-ph">
     <title lang="en">Headstart with Karen Davila</title>
-    <desc lang="en">Headstart with Karen Davila on ANC Global</desc>
+    <desc lang="en">Headstart with Karen Davila on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">71239</episode-num>
   </programme>
-  <programme start="20261105090000 +0800" stop="20261105100000 +0800" channel="anc-global">
-    <title lang="en">Market Edge</title>
-    <desc lang="en">Market Edge on ANC Global</desc>
+  <programme start="20261107020000 +0800" stop="20261107023000 +0800" channel="anc-ph">
+    <title lang="en">Local Legends</title>
+    <desc lang="en">Local Legends on ANC PH</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">95402</episode-num>
+    <episode-num system="clickthecity">107772</episode-num>
   </programme>
-  <programme start="20261105100000 +0800" stop="20261105103000 +0800" channel="anc-global">
-    <title lang="en">#NoFilter</title>
-    <desc lang="en">#NoFilter on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">96578</episode-num>
-  </programme>
-  <programme start="20261105103000 +0800" stop="20261105110000 +0800" channel="anc-global">
-    <title lang="en">Hot Copy on Headstart with Karen Davila</title>
-    <desc lang="en">Hot Copy on Headstart with Karen Davila on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71260</episode-num>
-  </programme>
-  <programme start="20261105110000 +0800" stop="20261105113000 +0800" channel="anc-global">
-    <title lang="en">Tomorrow Today</title>
-    <desc lang="en">Tomorrow Today on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">17900</episode-num>
-  </programme>
-  <programme start="20261105113000 +0800" stop="20261105120000 +0800" channel="anc-global">
-    <title lang="en">Tao Po!</title>
-    <desc lang="en">Tao Po! on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116451</episode-num>
-  </programme>
-  <programme start="20261105120000 +0800" stop="20261105130000 +0800" channel="anc-global">
-    <title lang="en">Dateline Philippines</title>
-    <desc lang="en">Dateline Philippines on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71242</episode-num>
-  </programme>
-  <programme start="20261105130000 +0800" stop="20261105133000 +0800" channel="anc-global">
+  <programme start="20261107023000 +0800" stop="20261107030000 +0800" channel="anc-ph">
     <title lang="en">On Cue</title>
-    <desc lang="en">On Cue on ANC Global</desc>
+    <desc lang="en">On Cue on ANC PH</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">115010</episode-num>
   </programme>
-  <programme start="20261105133000 +0800" stop="20261105140000 +0800" channel="anc-global">
+  <programme start="20261107030000 +0800" stop="20261107033000 +0800" channel="anc-ph">
+    <title lang="en">EIC on The Move</title>
+    <desc lang="en">EIC on The Move on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">105615</episode-num>
+  </programme>
+  <programme start="20261107033000 +0800" stop="20261107040000 +0800" channel="anc-ph">
+    <title lang="en">At The Moment</title>
+    <desc lang="en">At The Moment on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116870</episode-num>
+  </programme>
+  <programme start="20261107040000 +0800" stop="20261107050000 +0800" channel="anc-ph">
+    <title lang="en">Beached</title>
+    <desc lang="en">Beached on ANC PH</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">104493</episode-num>
+  </programme>
+  <programme start="20261106053000 +0800" stop="20261106060000 +0800" channel="anc-global">
     <title lang="en">Ride: Fei Originals</title>
     <desc lang="en">Ride: Fei Originals on ANC Global</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116874</episode-num>
   </programme>
-  <programme start="20261105140000 +0800" stop="20261105143000 +0800" channel="anc-global">
-    <title lang="en">Global 3000</title>
-    <desc lang="en">Global 3000 on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">50264</episode-num>
-  </programme>
-  <programme start="20261105143000 +0800" stop="20261105150000 +0800" channel="anc-global">
-    <title lang="en">At The Moment</title>
-    <desc lang="en">At The Moment on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116870</episode-num>
-  </programme>
-  <programme start="20261105150000 +0800" stop="20261105160000 +0800" channel="anc-global">
+  <programme start="20261106060000 +0800" stop="20261106070000 +0800" channel="anc-global">
     <title lang="en">Business Roadshow</title>
     <desc lang="en">Business Roadshow on ANC Global</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116875</episode-num>
   </programme>
-  <programme start="20261105160000 +0800" stop="20261105163000 +0800" channel="anc-global">
-    <title lang="en">Executive Class</title>
-    <desc lang="en">Executive Class on ANC Global</desc>
+  <programme start="20261106070000 +0800" stop="20261106073000 +0800" channel="anc-global">
+    <title lang="en">ANC Rundown</title>
+    <desc lang="en">ANC Rundown on ANC Global</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">71257</episode-num>
+    <episode-num system="clickthecity">108576</episode-num>
   </programme>
-  <programme start="20261105163000 +0800" stop="20261105170000 +0800" channel="anc-global">
-    <title lang="en">Made in Germany</title>
-    <desc lang="en">Made in Germany on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">117387</episode-num>
-  </programme>
-  <programme start="20261105170000 +0800" stop="20261105180000 +0800" channel="anc-global">
-    <title lang="en">Top Story</title>
-    <desc lang="en">Top Story on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71245</episode-num>
-  </programme>
-  <programme start="20261105180000 +0800" stop="20261105183000 +0800" channel="anc-global">
-    <title lang="en">Rev</title>
-    <desc lang="en">Rev on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">104291</episode-num>
-  </programme>
-  <programme start="20261105183000 +0800" stop="20261105200000 +0800" channel="anc-global">
-    <title lang="en">TV Patrol</title>
-    <desc lang="en">TV Patrol on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">32</episode-num>
-  </programme>
-  <programme start="20261105200000 +0800" stop="20261105203000 +0800" channel="anc-global">
+  <programme start="20261106073000 +0800" stop="20261106080000 +0800" channel="anc-global">
     <title lang="en">Business Outlook</title>
     <desc lang="en">Business Outlook on ANC Global</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116876</episode-num>
   </programme>
-  <programme start="20261105203000 +0800" stop="20261105210000 +0800" channel="anc-global">
-    <title lang="en">Dayaw</title>
-    <desc lang="en">Dayaw on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">95404</episode-num>
-  </programme>
-  <programme start="20261105210000 +0800" stop="20261105213000 +0800" channel="anc-global">
-    <title lang="en">The World Tonight</title>
-    <desc lang="en">The World Tonight on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71228</episode-num>
-  </programme>
-  <programme start="20261105213000 +0800" stop="20261105220000 +0800" channel="anc-global">
-    <title lang="en">Rev</title>
-    <desc lang="en">Rev on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">104291</episode-num>
-  </programme>
-  <programme start="20261105220000 +0800" stop="20261105223000 +0800" channel="anc-global">
-    <title lang="en">Arts.21</title>
-    <desc lang="en">Arts.21 on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116872</episode-num>
-  </programme>
-  <programme start="20261105223000 +0800" stop="20261105230000 +0800" channel="anc-global">
-    <title lang="en">My Puhunan Kaya Mo!</title>
-    <desc lang="en">My Puhunan Kaya Mo! on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">116538</episode-num>
-  </programme>
-  <programme start="20261105230000 +0800" stop="20261105233000 +0800" channel="anc-global">
-    <title lang="en">Executive Class</title>
-    <desc lang="en">Executive Class on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71257</episode-num>
-  </programme>
-  <programme start="20261105233000 +0800" stop="20261106000000 +0800" channel="anc-global">
-    <title lang="en">Asian Air Safari</title>
-    <desc lang="en">Asian Air Safari on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71248</episode-num>
-  </programme>
-  <programme start="20261106000000 +0800" stop="20261106003000 +0800" channel="anc-global">
-    <title lang="en">The World Tonight</title>
-    <desc lang="en">The World Tonight on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">71228</episode-num>
-  </programme>
-  <programme start="20261106003000 +0800" stop="20261106010000 +0800" channel="anc-global">
-    <title lang="en">Women of Style</title>
-    <desc lang="en">Women of Style on ANC Global</desc>
-    <category lang="en">News</category>
-    <episode-num system="clickthecity">105617</episode-num>
-  </programme>
-  <programme start="20261106010000 +0800" stop="20261106020000 +0800" channel="anc-global">
+  <programme start="20261106080000 +0800" stop="20261106090000 +0800" channel="anc-global">
     <title lang="en">Headstart with Karen Davila</title>
     <desc lang="en">Headstart with Karen Davila on ANC Global</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">71239</episode-num>
   </programme>
-  <programme start="20261106020000 +0800" stop="20261106023000 +0800" channel="anc-global">
-    <title lang="en">#NoFilter</title>
-    <desc lang="en">#NoFilter on ANC Global</desc>
+  <programme start="20261106090000 +0800" stop="20261106100000 +0800" channel="anc-global">
+    <title lang="en">Market Edge</title>
+    <desc lang="en">Market Edge on ANC Global</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">96578</episode-num>
+    <episode-num system="clickthecity">95402</episode-num>
   </programme>
-  <programme start="20261106023000 +0800" stop="20261106030000 +0800" channel="anc-global">
-    <title lang="en">My Italy with Margarita</title>
-    <desc lang="en">My Italy with Margarita on ANC Global</desc>
+  <programme start="20261106100000 +0800" stop="20261106103000 +0800" channel="anc-global">
+    <title lang="en">Local Legends</title>
+    <desc lang="en">Local Legends on ANC Global</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">109035</episode-num>
+    <episode-num system="clickthecity">107772</episode-num>
   </programme>
-  <programme start="20261106030000 +0800" stop="20261106033000 +0800" channel="anc-global">
+  <programme start="20261106103000 +0800" stop="20261106110000 +0800" channel="anc-global">
+    <title lang="en">Hot Copy on Headstart with Karen Davila</title>
+    <desc lang="en">Hot Copy on Headstart with Karen Davila on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71260</episode-num>
+  </programme>
+  <programme start="20261106110000 +0800" stop="20261106113000 +0800" channel="anc-global">
+    <title lang="en">Global Us</title>
+    <desc lang="en">Global Us on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">41952</episode-num>
+  </programme>
+  <programme start="20261106113000 +0800" stop="20261106120000 +0800" channel="anc-global">
+    <title lang="en">Rev</title>
+    <desc lang="en">Rev on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">104291</episode-num>
+  </programme>
+  <programme start="20261106120000 +0800" stop="20261106130000 +0800" channel="anc-global">
+    <title lang="en">Dateline Philippines</title>
+    <desc lang="en">Dateline Philippines on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71242</episode-num>
+  </programme>
+  <programme start="20261106130000 +0800" stop="20261106140000 +0800" channel="anc-global">
+    <title lang="en">24x24</title>
+    <desc lang="en">24x24 on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116877</episode-num>
+  </programme>
+  <programme start="20261106140000 +0800" stop="20261106143000 +0800" channel="anc-global">
+    <title lang="en">In Good Shape</title>
+    <desc lang="en">In Good Shape on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">50263</episode-num>
+  </programme>
+  <programme start="20261106143000 +0800" stop="20261106150000 +0800" channel="anc-global">
+    <title lang="en">Dayaw</title>
+    <desc lang="en">Dayaw on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">95404</episode-num>
+  </programme>
+  <programme start="20261106150000 +0800" stop="20261106160000 +0800" channel="anc-global">
+    <title lang="en">Business Roadshow</title>
+    <desc lang="en">Business Roadshow on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116875</episode-num>
+  </programme>
+  <programme start="20261106160000 +0800" stop="20261106163000 +0800" channel="anc-global">
+    <title lang="en">Beyond The Exchange</title>
+    <desc lang="en">Beyond The Exchange on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">117905</episode-num>
+  </programme>
+  <programme start="20261106163000 +0800" stop="20261106170000 +0800" channel="anc-global">
+    <title lang="en">Tomorrow Today</title>
+    <desc lang="en">Tomorrow Today on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">17900</episode-num>
+  </programme>
+  <programme start="20261106170000 +0800" stop="20261106180000 +0800" channel="anc-global">
+    <title lang="en">Top Story</title>
+    <desc lang="en">Top Story on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71245</episode-num>
+  </programme>
+  <programme start="20261106180000 +0800" stop="20261106183000 +0800" channel="anc-global">
+    <title lang="en">LSS: The Martin Nievera Show</title>
+    <desc lang="en">LSS: The Martin Nievera Show on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">108574</episode-num>
+  </programme>
+  <programme start="20261106183000 +0800" stop="20261106200000 +0800" channel="anc-global">
+    <title lang="en">TV Patrol</title>
+    <desc lang="en">TV Patrol on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">32</episode-num>
+  </programme>
+  <programme start="20261106200000 +0800" stop="20261106203000 +0800" channel="anc-global">
+    <title lang="en">Business Outlook</title>
+    <desc lang="en">Business Outlook on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116876</episode-num>
+  </programme>
+  <programme start="20261106203000 +0800" stop="20261106210000 +0800" channel="anc-global">
     <title lang="en">At The Moment</title>
     <desc lang="en">At The Moment on ANC Global</desc>
     <category lang="en">News</category>
     <episode-num system="clickthecity">116870</episode-num>
   </programme>
-  <programme start="20261106033000 +0800" stop="20261106040000 +0800" channel="anc-global">
-    <title lang="en">Casa Daza</title>
-    <desc lang="en">Casa Daza on ANC Global</desc>
+  <programme start="20261106210000 +0800" stop="20261106213000 +0800" channel="anc-global">
+    <title lang="en">The World Tonight</title>
+    <desc lang="en">The World Tonight on ANC Global</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">100981</episode-num>
+    <episode-num system="clickthecity">71228</episode-num>
   </programme>
-  <programme start="20261106040000 +0800" stop="20261106043000 +0800" channel="anc-global">
-    <title lang="en">Dwellings</title>
-    <desc lang="en">Dwellings on ANC Global</desc>
+  <programme start="20261106213000 +0800" stop="20261106220000 +0800" channel="anc-global">
+    <title lang="en">LSS: The Martin Nievera Show</title>
+    <desc lang="en">LSS: The Martin Nievera Show on ANC Global</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">116871</episode-num>
+    <episode-num system="clickthecity">108574</episode-num>
   </programme>
-  <programme start="20261106043000 +0800" stop="20261106053000 +0800" channel="anc-global">
-    <title lang="en">Arts.21</title>
-    <desc lang="en">Arts.21 on ANC Global</desc>
+  <programme start="20261106220000 +0800" stop="20261106223000 +0800" channel="anc-global">
+    <title lang="en">Made in Germany</title>
+    <desc lang="en">Made in Germany on ANC Global</desc>
     <category lang="en">News</category>
-    <episode-num system="clickthecity">116872</episode-num>
+    <episode-num system="clickthecity">117387</episode-num>
   </programme>
-  <programme start="20261105053000 +0800" stop="20261105080000 +0800" channel="tv5-ph">
+  <programme start="20261106223000 +0800" stop="20261106230000 +0800" channel="anc-global">
+    <title lang="en">Rev</title>
+    <desc lang="en">Rev on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">104291</episode-num>
+  </programme>
+  <programme start="20261106230000 +0800" stop="20261107000000 +0800" channel="anc-global">
+    <title lang="en">Chasing Flavors</title>
+    <desc lang="en">Chasing Flavors on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">101515</episode-num>
+  </programme>
+  <programme start="20261107000000 +0800" stop="20261107003000 +0800" channel="anc-global">
+    <title lang="en">The World Tonight</title>
+    <desc lang="en">The World Tonight on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71228</episode-num>
+  </programme>
+  <programme start="20261107003000 +0800" stop="20261107010000 +0800" channel="anc-global">
+    <title lang="en">Insight with April Lee-Tan</title>
+    <desc lang="en">Insight with April Lee-Tan on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">915</episode-num>
+  </programme>
+  <programme start="20261107010000 +0800" stop="20261107020000 +0800" channel="anc-global">
+    <title lang="en">Headstart with Karen Davila</title>
+    <desc lang="en">Headstart with Karen Davila on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">71239</episode-num>
+  </programme>
+  <programme start="20261107020000 +0800" stop="20261107023000 +0800" channel="anc-global">
+    <title lang="en">Local Legends</title>
+    <desc lang="en">Local Legends on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">107772</episode-num>
+  </programme>
+  <programme start="20261107023000 +0800" stop="20261107030000 +0800" channel="anc-global">
+    <title lang="en">On Cue</title>
+    <desc lang="en">On Cue on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">115010</episode-num>
+  </programme>
+  <programme start="20261107030000 +0800" stop="20261107033000 +0800" channel="anc-global">
+    <title lang="en">EIC on The Move</title>
+    <desc lang="en">EIC on The Move on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">105615</episode-num>
+  </programme>
+  <programme start="20261107033000 +0800" stop="20261107040000 +0800" channel="anc-global">
+    <title lang="en">At The Moment</title>
+    <desc lang="en">At The Moment on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">116870</episode-num>
+  </programme>
+  <programme start="20261107040000 +0800" stop="20261107050000 +0800" channel="anc-global">
+    <title lang="en">Beached</title>
+    <desc lang="en">Beached on ANC Global</desc>
+    <category lang="en">News</category>
+    <episode-num system="clickthecity">104493</episode-num>
+  </programme>
+  <programme start="20261106053000 +0800" stop="20261106080000 +0800" channel="tv5-ph">
     <title lang="en">Frontline Sa Umaga</title>
     <desc lang="en">Frontline Sa Umaga on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">35138</episode-num>
   </programme>
-  <programme start="20261105080000 +0800" stop="20261105083000 +0800" channel="tv5-ph">
+  <programme start="20261106080000 +0800" stop="20261106083000 +0800" channel="tv5-ph">
     <title lang="en">Chibi Maruko Chan</title>
     <desc lang="en">Chibi Maruko Chan on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">103579</episode-num>
   </programme>
-  <programme start="20261105083000 +0800" stop="20261105103000 +0800" channel="tv5-ph">
+  <programme start="20261106083000 +0800" stop="20261106103000 +0800" channel="tv5-ph">
     <title lang="en">Blockbuster Sa Umaga</title>
     <desc lang="en">Blockbuster Sa Umaga on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118489</episode-num>
   </programme>
-  <programme start="20261105103000 +0800" stop="20261105110000 +0800" channel="tv5-ph">
+  <programme start="20261106103000 +0800" stop="20261106110000 +0800" channel="tv5-ph">
     <title lang="en">Frontline Express Live</title>
     <desc lang="en">Frontline Express Live on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">117003</episode-num>
   </programme>
-  <programme start="20261105110000 +0800" stop="20261105120000 +0800" channel="tv5-ph">
+  <programme start="20261106110000 +0800" stop="20261106120000 +0800" channel="tv5-ph">
     <title lang="en">Gandang Mornings with Ate Koring</title>
     <desc lang="en">Gandang Mornings with Ate Koring on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">62934</episode-num>
   </programme>
-  <programme start="20261105120000 +0800" stop="20261105143000 +0800" channel="tv5-ph">
+  <programme start="20261106120000 +0800" stop="20261106143000 +0800" channel="tv5-ph">
     <title lang="en">Eat Bulaga</title>
     <desc lang="en">Eat Bulaga on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">58</episode-num>
   </programme>
-  <programme start="20261105143000 +0800" stop="20261105151500 +0800" channel="tv5-ph">
+  <programme start="20261106143000 +0800" stop="20261106151500 +0800" channel="tv5-ph">
     <title lang="en">Mommy Guard</title>
     <desc lang="en">Mommy Guard on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118680</episode-num>
   </programme>
-  <programme start="20261105151500 +0800" stop="20261105160000 +0800" channel="tv5-ph">
+  <programme start="20261106151500 +0800" stop="20261106160000 +0800" channel="tv5-ph">
     <title lang="en">Frontline Express PM</title>
     <desc lang="en">Frontline Express PM on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118590</episode-num>
   </programme>
-  <programme start="20261105160000 +0800" stop="20261105164500 +0800" channel="tv5-ph">
+  <programme start="20261106160000 +0800" stop="20261106164500 +0800" channel="tv5-ph">
     <title lang="en">Suntok Sa Buwan</title>
     <desc lang="en">Suntok Sa Buwan on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">115549</episode-num>
   </programme>
-  <programme start="20261105164500 +0800" stop="20261105173000 +0800" channel="tv5-ph">
+  <programme start="20261106164500 +0800" stop="20261106173000 +0800" channel="tv5-ph">
     <title lang="en">Knight Rider</title>
     <desc lang="en">Knight Rider on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">52678</episode-num>
   </programme>
-  <programme start="20261105173000 +0800" stop="20261105180000 +0800" channel="tv5-ph">
+  <programme start="20261106173000 +0800" stop="20261106180000 +0800" channel="tv5-ph">
     <title lang="en">Jasmine</title>
     <desc lang="en">Jasmine on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">87404</episode-num>
   </programme>
-  <programme start="20261105180000 +0800" stop="20261105183000 +0800" channel="tv5-ph">
+  <programme start="20261106180000 +0800" stop="20261106183000 +0800" channel="tv5-ph">
     <title lang="en">Frontline Pilipinas: Una Sa Lahat</title>
     <desc lang="en">Frontline Pilipinas: Una Sa Lahat on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">117712</episode-num>
   </programme>
-  <programme start="20261105183000 +0800" stop="20261105200000 +0800" channel="tv5-ph">
+  <programme start="20261106183000 +0800" stop="20261106200000 +0800" channel="tv5-ph">
     <title lang="en">Frontline Pilipinas</title>
     <desc lang="en">Frontline Pilipinas on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">111380</episode-num>
   </programme>
-  <programme start="20261105200000 +0800" stop="20261105204500 +0800" channel="tv5-ph">
+  <programme start="20261106200000 +0800" stop="20261106204500 +0800" channel="tv5-ph">
     <title lang="en">Sigabo</title>
     <desc lang="en">Sigabo on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118475</episode-num>
   </programme>
-  <programme start="20261105204500 +0800" stop="20261105213000 +0800" channel="tv5-ph">
+  <programme start="20261106204500 +0800" stop="20261106213000 +0800" channel="tv5-ph">
     <title lang="en">Someone, Someday</title>
     <desc lang="en">Someone, Someday on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118547</episode-num>
   </programme>
-  <programme start="20261105213000 +0800" stop="20261105221500 +0800" channel="tv5-ph">
+  <programme start="20261106213000 +0800" stop="20261106221500 +0800" channel="tv5-ph">
     <title lang="en">The Loyalty Game: Level Up</title>
     <desc lang="en">The Loyalty Game: Level Up on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">116857</episode-num>
   </programme>
-  <programme start="20261105221500 +0800" stop="20261105224500 +0800" channel="tv5-ph">
+  <programme start="20261106221500 +0800" stop="20261106224500 +0800" channel="tv5-ph">
     <title lang="en">Frontline Tonight</title>
     <desc lang="en">Frontline Tonight on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">114228</episode-num>
   </programme>
-  <programme start="20261105224500 +0800" stop="20261106000000 +0800" channel="tv5-ph">
+  <programme start="20261106224500 +0800" stop="20261107000000 +0800" channel="tv5-ph">
     <title lang="en">Mga Nagbabagang Bulaklak</title>
     <desc lang="en">Mga Nagbabagang Bulaklak on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118679</episode-num>
   </programme>
-  <programme start="20261106000000 +0800" stop="20261106043000 +0800" channel="tv5-ph">
+  <programme start="20261107000000 +0800" stop="20261107010000 +0800" channel="tv5-ph">
     <title lang="en">Oras Ng Himala</title>
     <desc lang="en">Oras Ng Himala on TV5</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">14508</episode-num>
   </programme>
-  <programme start="20261106043000 +0800" stop="20261106053000 +0800" channel="tv5-ph">
-    <title lang="en">Mga Kwentong MX3</title>
-    <desc lang="en">Mga Kwentong MX3 on TV5</desc>
-    <category lang="en">General</category>
-    <episode-num system="clickthecity">117831</episode-num>
-  </programme>
-  <programme start="20261105050000 +0800" stop="20261105060000 +0800" channel="a2z-ph">
+  <programme start="20261106050000 +0800" stop="20261106060000 +0800" channel="a2z-ph">
     <title lang="en">Shuffle</title>
     <desc lang="en">Shuffle on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">115184</episode-num>
   </programme>
-  <programme start="20261105060000 +0800" stop="20261105070000 +0800" channel="a2z-ph">
+  <programme start="20261106060000 +0800" stop="20261106070000 +0800" channel="a2z-ph">
     <title lang="en">Bro. Eddie Villanueva Classics</title>
     <desc lang="en">Bro. Eddie Villanueva Classics on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">111583</episode-num>
   </programme>
-  <programme start="20261105070000 +0800" stop="20261105080000 +0800" channel="a2z-ph">
+  <programme start="20261106070000 +0800" stop="20261106080000 +0800" channel="a2z-ph">
     <title lang="en">A2Z School Anywhere</title>
     <desc lang="en">A2Z School Anywhere on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">111584</episode-num>
   </programme>
-  <programme start="20261105080000 +0800" stop="20261105083000 +0800" channel="a2z-ph">
+  <programme start="20261106080000 +0800" stop="20261106083000 +0800" channel="a2z-ph">
     <title lang="en">Superbook S5</title>
     <desc lang="en">Superbook S5 on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118207</episode-num>
   </programme>
-  <programme start="20261105083000 +0800" stop="20261105093000 +0800" channel="a2z-ph">
+  <programme start="20261106083000 +0800" stop="20261106093000 +0800" channel="a2z-ph">
     <title lang="en">Magandang Buhay</title>
     <desc lang="en">Magandang Buhay on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">97290</episode-num>
   </programme>
-  <programme start="20261105093000 +0800" stop="20261105100000 +0800" channel="a2z-ph">
+  <programme start="20261106093000 +0800" stop="20261106100000 +0800" channel="a2z-ph">
     <title lang="en">Oh My Gan!</title>
     <desc lang="en">Oh My Gan! on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118488</episode-num>
   </programme>
-  <programme start="20261105100000 +0800" stop="20261105120000 +0800" channel="a2z-ph">
+  <programme start="20261106100000 +0800" stop="20261106120000 +0800" channel="a2z-ph">
     <title lang="en">Blockbuster Sa Umaga</title>
     <desc lang="en">Blockbuster Sa Umaga on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118489</episode-num>
   </programme>
-  <programme start="20261105120000 +0800" stop="20261105143000 +0800" channel="a2z-ph">
+  <programme start="20261106120000 +0800" stop="20261106143000 +0800" channel="a2z-ph">
     <title lang="en">It's Showtime</title>
     <desc lang="en">It's Showtime on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">59757</episode-num>
   </programme>
-  <programme start="20261105143000 +0800" stop="20261105160000 +0800" channel="a2z-ph">
+  <programme start="20261106143000 +0800" stop="20261106160000 +0800" channel="a2z-ph">
     <title lang="en">What Lies Beneath</title>
     <desc lang="en">What Lies Beneath on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118000</episode-num>
   </programme>
-  <programme start="20261105160000 +0800" stop="20261105173000 +0800" channel="a2z-ph">
+  <programme start="20261106160000 +0800" stop="20261106173000 +0800" channel="a2z-ph">
     <title lang="en">Afternoon Zinema</title>
     <desc lang="en">Afternoon Zinema on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">111587</episode-num>
   </programme>
-  <programme start="20261105173000 +0800" stop="20261105174500 +0800" channel="a2z-ph">
+  <programme start="20261106173000 +0800" stop="20261106174500 +0800" channel="a2z-ph">
     <title lang="en">TV Patrol Express</title>
     <desc lang="en">TV Patrol Express on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">117155</episode-num>
   </programme>
-  <programme start="20261105174500 +0800" stop="20261105183000 +0800" channel="a2z-ph">
+  <programme start="20261106174500 +0800" stop="20261106183000 +0800" channel="a2z-ph">
     <title lang="en">Minute To Win It</title>
     <desc lang="en">Minute To Win It on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">65306</episode-num>
   </programme>
-  <programme start="20261105183000 +0800" stop="20261105200000 +0800" channel="a2z-ph">
+  <programme start="20261106183000 +0800" stop="20261106200000 +0800" channel="a2z-ph">
     <title lang="en">TV Patrol</title>
     <desc lang="en">TV Patrol on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">32</episode-num>
   </programme>
-  <programme start="20261105200000 +0800" stop="20261105204500 +0800" channel="a2z-ph">
+  <programme start="20261106200000 +0800" stop="20261106204500 +0800" channel="a2z-ph">
     <title lang="en">Sigabo</title>
     <desc lang="en">Sigabo on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118475</episode-num>
   </programme>
-  <programme start="20261105204500 +0800" stop="20261105213000 +0800" channel="a2z-ph">
+  <programme start="20261106204500 +0800" stop="20261106213000 +0800" channel="a2z-ph">
     <title lang="en">Someone, Someday</title>
     <desc lang="en">Someone, Someday on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118547</episode-num>
   </programme>
-  <programme start="20261105213000 +0800" stop="20261105221500 +0800" channel="a2z-ph">
+  <programme start="20261106213000 +0800" stop="20261106221500 +0800" channel="a2z-ph">
     <title lang="en">The Loyalty Game: Level Up</title>
     <desc lang="en">The Loyalty Game: Level Up on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">116857</episode-num>
   </programme>
-  <programme start="20261105221500 +0800" stop="20261105224500 +0800" channel="a2z-ph">
+  <programme start="20261106221500 +0800" stop="20261106224500 +0800" channel="a2z-ph">
     <title lang="en">Falling Into Your Smile</title>
     <desc lang="en">Falling Into Your Smile on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">118570</episode-num>
   </programme>
-  <programme start="20261105224500 +0800" stop="20261105231500 +0800" channel="a2z-ph">
+  <programme start="20261106224500 +0800" stop="20261106231500 +0800" channel="a2z-ph">
     <title lang="en">Balitang A2Z</title>
     <desc lang="en">Balitang A2Z on A2Z</desc>
     <category lang="en">General</category>
     <episode-num system="clickthecity">113817</episode-num>
   </programme>
-  <programme start="20261105231500 +0800" stop="20261106001500 +0800" channel="a2z-ph">
+  <programme start="20261106231500 +0800" stop="20261107001500 +0800" channel="a2z-ph">
     <title lang="en">Bro. Eddie Villanueva Classics</title>
     <desc lang="en">Bro. Eddie Villanueva Classics on A2Z</desc>
     <category lang="en">General</category>
